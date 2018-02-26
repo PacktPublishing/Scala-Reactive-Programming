@@ -1,0 +1,17 @@
+@import models.WFForm
+
+@(wfForm:Form[WFForm])(implicit messages:Messages)
+@main("WF") {
+<div class="modal-body">
+    @foundationForm(wfForm, routes.WFController.changeWF()) {
+    @helper.inputText(wfForm("city"),  'placeholder -> "CITY",'id -> "id" )
+    @helper.inputText(wfForm("temperature"),  'placeholder -> "TEMPERATURE",'id -> "id" )
+
+    <center>
+        <input class="button success" type="submit" value="Submit"/>
+    </center>
+    }
+
+</div>
+
+}

@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# HelloWorldController without using Play DI
+GET     /helloWorld                 controllers.HelloWorldNoDIController.helloWorld
+
+# HelloWorldController with Play DI
+GET     /helloWorldDI               controllers.HelloWorldDIController.helloWorld
+
+# HelloWorldController with Play DI and Scala Futures
+GET     /helloWorldDIFuture         controllers.HelloWorldDIAndScalaFutureController.helloWorld
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+

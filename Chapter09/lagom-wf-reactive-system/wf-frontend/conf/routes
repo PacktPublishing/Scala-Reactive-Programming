@@ -1,0 +1,11 @@
+
+GET         /assets/*file              controllers.Assets.at(path = "/public", file)
+
+## WF Routes
+GET         /weather                   controllers.WFController.show()
+POST        /changedWeather            controllers.WFController.changeWF()
+
+GET         /wf                        controllers.WFConsumerController.weather()
+GET         /wf/one                    controllers.WFConsumerController.weatherOne()
+GET         /latestwf                  controllers.WFConsumerController.latestWeather()
+

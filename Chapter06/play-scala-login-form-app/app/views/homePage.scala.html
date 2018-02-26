@@ -1,0 +1,7 @@
+@()(implicit flash: Flash)
+
+@flash.get("loginStatus").map { message =>
+    <h2>@message</h2>
+}
+
+

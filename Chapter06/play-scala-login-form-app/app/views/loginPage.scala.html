@@ -1,0 +1,16 @@
+@(userForm:Form[forms.UserData])(implicit flash: Flash, request: MessagesRequestHeader)
+
+@if(userForm.hasGlobalErrors) {
+<ul>
+    @for(error <- userForm.globalErrors) {
+    <li>@error.message</li>
+    }
+</ul>
+}
+<h1>WF Reactive System Login</h1>
+@helper.form(action = routes.LoginController.submitLogin) {
+    @helper.inputText(userForm("username"))
+    @helper.inputPassword(userForm("password"))
+    @helper.CSRF.formField
+    <input type="submit" value="Submit"/>
+}
