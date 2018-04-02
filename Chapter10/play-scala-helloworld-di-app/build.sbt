@@ -1,6 +1,6 @@
-name := "play-scala-hellowworld-app"
+name := "play-scala-helloworld-di-app"
 
-version := "1.0.o"
+version := "1.0.0"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 

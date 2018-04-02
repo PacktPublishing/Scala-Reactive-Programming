@@ -1,9 +1,9 @@
 package services
 
-import actors.HelloWorldActorController
+import actors.HelloWorldActorConnector
 
 trait HelloWorldService {
-  def helloWorldController: HelloWorldActorController
+  def helloWorldController: HelloWorldActorConnector
 
   def helloWorldWithDI = helloWorldController.helloWorldWithDI
 
@@ -11,5 +11,5 @@ trait HelloWorldService {
 }
 
 object HelloWorldService extends HelloWorldService {
-  val helloWorldController: HelloWorldActorController = HelloWorldActorController
+  val helloWorldController: HelloWorldActorConnector = HelloWorldActorConnector
 }

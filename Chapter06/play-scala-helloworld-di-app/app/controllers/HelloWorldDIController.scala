@@ -1,10 +1,11 @@
 package controllers
 
-import javax.inject._
-import play.api.mvc._
+import javax.inject.Inject
+import javax.inject.Singleton
+import play.api.mvc.{AbstractController, ControllerComponents}
 
 @Singleton
-class HelloWorldDIController @Inject() extends Controller {
+class HelloWorldDIController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   def helloWorld = Action {
     Ok(views.html.helloWorld("Hello World With DI."))
