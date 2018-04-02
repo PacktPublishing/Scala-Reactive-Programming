@@ -5,9 +5,7 @@ Reactive programming is a scalable, fast way to build applications, and one that
 ## Instructions and Navigation
 All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
 
-All code files have been placed in their repsective folders. Chapters 1 and 8 do not have any code files. 
-
-The Scala and Play versions will be updated with the latest release on GitHub soon.
+All code files have been placed in their repsective folders. Chapters 1 and 8 do not have any code files.
 
 The code will look like the following:
 ```
